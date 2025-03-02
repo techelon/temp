@@ -1,0 +1,38 @@
+{
+   "action": {
+      "default_icon": {
+         "128": "icons/128_logo.png"
+      },
+      "default_popup": "popup.html",
+      "default_title": "__MSG_extName__"
+   },
+   "background": {
+      "service_worker": "js/background.js"
+   },
+   "content_scripts": [ {
+      "css": [ "css/custom.css" ],
+      "js": [ "js/content-script.js" ],
+      "matches": [ "*://clips.twitch.tv/*", "*://www.twitch.tv/*" ],
+      "run_at": "document_end"
+   }, {
+      "js": [ "js/web-script.js" ],
+      "matches": [ "*://twiclips.com/*", "*://dev.twiclips.com/" ],
+      "run_at": "document_end"
+   } ],
+   "default_locale": "en",
+   "description": "__MSG_extDes__",
+   "externally_connectable": {
+      "matches": [ "*://localhost/*", "*://*.twiclips.com/*", "*://twiclips.com/*" ]
+   },
+   "homepage_url": "https://chrome.google.com/webstore/detail/twiclips/mjnnjgpeccmgcobgegepeljeedilebif",
+   "host_permissions": [ "*://*.facebook.com/*", "*://*.twitter.com/*", "*://*.pinterest.com/*", "*://*.reddit.com/*", "*://*.aliyuncs.com/*", "*://twiclips.com/*", "*://dev.twiclips.com/", "*://clips.twitch.tv/*", "*://www.twitch.tv/*" ],
+   "icons": {
+      "128": "icons/128_logo.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAiSc9b0DJVJPKadOCm2iYgG3oyMQuXJ0Qd6LBqUlajelOc7fjHIoyePR8RRJFBsQuHx8PfTjx4337LqbrDJ+aSHsrbljD1Uo/VbpzLgUXeUJGVsZRjxk+4gbQcxZ2FG/ftE0wLBhhYl8U8fEpJA1p6TE2zaTajeNoYX3yTVzcAJssjiW+lOL5jxr3alXurSD4aA5BfZsIaZ3F4oOqutPW3jQKGz6Zxhp6jWZ7uvVoC2UpPia8Zg0eG3ZUeJY6CwvhYLk+hcVeYGYoSLlpUHOb9HUWopOvxkS2+SRM0O/mi0XyZyV0oe2GKS3H9YaJi+ZSUUTuC0Jvi/yUqGeR5ZJRYwIDAQAB",
+   "manifest_version": 3,
+   "name": "__MSG_extName__",
+   "permissions": [ "activeTab", "storage" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.0.12"
+}
